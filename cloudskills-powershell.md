@@ -119,6 +119,7 @@ blah
 
 ## ARM Template Development and Deployment
 
-blah
-
-
+* [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)
+* [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/)
+* [Deploy a storage account](https://github.com/Azure/azure-quickstart-templates/tree/master/101-storage-account-create)
+* [Deploy multiple VMs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-multiple)
