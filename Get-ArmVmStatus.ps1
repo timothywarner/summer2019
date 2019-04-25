@@ -98,3 +98,5 @@ function Get-ARMVmStatus {
       }
     }
 }
+
+# get-azvm
