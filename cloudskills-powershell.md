@@ -25,6 +25,7 @@ Let's learn how to migrate from the deprecated PowerShell ISE to VSCode!
 * Install the [Azure Account extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)
 * Install the [Azure Resource Manager Tools ](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)extension
 * Install [VSCode icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+* * Install the [Shell Launcher extension](https://marketplace.visualstudio.com/items?itemName=Tyriar.shell-launcher)
 
 ### Pop in your snippets
 
@@ -122,4 +123,9 @@ blah
 * [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)
 * [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/)
 * [Deploy a storage account](https://github.com/Azure/azure-quickstart-templates/tree/master/101-storage-account-create)
+* [Protect secret in ARM template](https://github.com/Azure/azure-quickstart-templates/tree/master/101-vm-secure-password)
 * [Deploy multiple VMs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-multiple)
+
+### If we have time...
+* [Passing parameters as objects in ARM templates](https://github.com/mspnp/template-examples/tree/master/example3-object-param)
+* [Subscription-scoped deployments](https://docs.microsoft.com/en-us/azure/azure-resource-manager/deploy-to-subscription)
