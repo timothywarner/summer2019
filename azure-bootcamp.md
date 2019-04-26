@@ -26,4 +26,4 @@ Relevant links:
 
 ## Visual Studio Code for the Azure Pro
 
-Please see [this doc](https://github.com/timothywarner/summer2019/blob/master/azure-bootcamp.md) for notes
+Please see [this doc](https://github.com/timothywarner/summer2019/blob/master/cloudskills-powershell.md) for notes
