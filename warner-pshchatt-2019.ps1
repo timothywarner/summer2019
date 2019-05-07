@@ -9,22 +9,37 @@ Tim Warner (@TechTrainerTim)
 break
 
 # Sources of confusion
-Find-Module -Name Azure, AzureRm, Az
+Find-Module -Name Azure, AzureRm, Az | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate
 
-# AzureRm will receive bug/security fixes through December 2020
+Find-Module -Name Az -AllVersions | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate
+<#
+Requires: Az requires PowerShell v5 (not v3 anymore)
+
+Support: AzureRm will receive bug/security fixes through December 2020
+
+Az Releases: https://github.com/Azure/azure-powershell/releases
+
+Migration guide for Az 2.0.0: https://github.com/Azure/azure-powershell/blob/master/documentation/migration-guides/Az.2.0.0-migration-guide.md
+
+Migration guide for Az 1.0.0: https://docs.microsoft.com/en-us/powershell/azure/migrate-az-1.0.0?view=azps-2.0.0
+#>
 
 # Get rid of AzureRm
 Get-InstalledModule -Name AzureRm -AllVersions
 code .\Remove-AzureRmModules.ps1
 
 # Install Az
+Get-InstalledModule -Name Az
+Find-Module -Name Az
 Install-Module -Name Az -Verbose -Force -AllowClobber -WhatIf
 
 # Authenticate
-Connect-AzAccount # non-Windows systems get browser code auth flow
+Connect-AzAccount # non-Windows systems get browser Device Code auth flow
+# Alias Login-AzAccount
 
 # Command discovery
 Get-Module -ListAvailable -Name Az.* | Measure-Object
+
 Get-Command -Module Az.* | Measure-Object | Select-Object -Property Count
 
 # Comparison: https://justaucguy.wordpress.com/2018/11/02/azure-az-powershell-module-new/
@@ -65,4 +80,4 @@ $params = @{'ResourceGroupName' = 'TestRG1';
 }
 New-AzResourceGroupDeployment @params
 
-#
+# Refactoring an AzureRm script
