@@ -65,11 +65,22 @@ Foreach ($s in $Source) {
 Get-AzVm -ResourceGroupName 'contoso' # -Name 'vm2'
 
 <#
-AzureRM and Az use some of the same DLLs, so their modules cannot be loaded into the same PowerShell session.
+Compatibility aliases: AzureRM and Az use some of the same DLLs, so their modules cannot be loaded into the same PowerShell session.
 #>
 Get-Alias
 Enable-AzureRmAlias -Scope CurrentUser
 Disable-AzureRmAlias
+
+# Deeper with aliases (ref: https://bartsimons.me/convert-azurerm-scripts-to-az/)
+$mappings = ((Invoke-WebRequest https://raw.githubusercontent.com/Azure/azure-powershell/master/src/Accounts/Accounts/AzureRmAlias/Mappings.json -UseBasicParsing).Content | ConvertFrom-Json)
+
+($mappings | Get-Member -MemberType NoteProperty) | ForEach-Object {
+    $mappings.$($_.Name) | ForEach-Object {
+        ForEach ($Mapping in ($_ | Get-Member -MemberType NoteProperty)) {
+            Write-Output $_.$($Mapping.Name) "=>" $Mapping.Name
+        }
+    }
+} | Out-File -FilePath '.\mappings.txt'
 
 # Deploy a template
 New-AzResourceGroup -Name 'TestRG1' -Location 'EastUS2'
@@ -83,3 +94,4 @@ New-AzResourceGroupDeployment @params
 # Refactoring an AzureRm script
 code 'E:\summer2019\Gnarly-AzureRm-Script.ps1'
 
+#
