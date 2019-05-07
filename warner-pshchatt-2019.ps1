@@ -81,3 +81,5 @@ $params = @{'ResourceGroupName' = 'TestRG1';
 New-AzResourceGroupDeployment @params
 
 # Refactoring an AzureRm script
+code 'E:\summer2019\Gnarly-AzureRm-Script.ps1'
+
