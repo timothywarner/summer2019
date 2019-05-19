@@ -30,7 +30,9 @@
         "*.ps1": "powershell"
     },
 
-
+        "powershell.enableProfileLoading": true,
+        "powershell.integratedConsole.focusConsoleOnExecute": true,
+        "powershell.integratedConsole.showOnStartup": false,
 
         "shellLauncher.shells.windows": [
             {
@@ -42,13 +44,5 @@
                 "label": "PowerShell Desktop"
             }
         ],
-
-
-
-
-        
-    "powershell.enableProfileLoading": true,
-    "powershell.integratedConsole.focusConsoleOnExecute": true,
-    "powershell.integratedConsole.showOnStartup": false,
 
 }
