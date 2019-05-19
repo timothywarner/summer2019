@@ -1,0 +1,54 @@
+{
+
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.showIcons": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.colorTheme": "PowerShell ISE",
+
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.wordWrap": "on",
+    "editor.formatOnType": true,
+    "editor.tabCompletion": "on",
+    "editor.formatOnPaste": true,
+    "editor.wordBasedSuggestions": false,
+    "editor.fontSize": 10,
+
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "files.defaultLanguage": "Plain Text",
+
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "files.associations": {
+        "*.ps1": "powershell"
+    },
+
+
+
+        "shellLauncher.shells.windows": [
+            {
+                "shell": "c:\\Program Files\\PowerShell\\6\\pwsh.exe",
+                "label": "PowerShell Core"
+            },
+            {
+                "shell": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "label": "PowerShell Desktop"
+            }
+        ],
+
+
+
+
+        
+    "powershell.enableProfileLoading": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": true,
+    "powershell.integratedConsole.showOnStartup": false,
+
+}
