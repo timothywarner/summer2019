@@ -5,6 +5,7 @@
 │   DATE        : June 5, 2019                                         │
 │   AUTHOR      : Tim Warner (@TechTrainerTim)                         │
 │   DESCRIPTION : http://timw.info/psp                                 │
+│   DEMO FILE   : http://timw.info/summer2019                          │
 └──────────────────────────────────────────────────────────────────────┘
 #>
 
@@ -43,6 +44,7 @@ https://docs.poshtools.com/powershell-pro-tools-documentation/visual-studio-code
 
 # Package a script, potentially with the PS Core runtime
 # palette > PowerShell: Package as executable
+code .\hello.ps1
 Merge-Script -Config @{
     Root       = 'C:\Users\tim\summer2019\hello.ps1'
     OutputPath = 'C:\Users\tim\summer2019\out'
@@ -56,6 +58,8 @@ Merge-Script -Config @{
 
 # ConvertTo-PowerShell & ConvertTo-CSharp
 # palette > CSharp: Convert to PowerShell / PowerShell: Convert to CSharp
+code .\hello.cs
+code .\hello.ps1
 
 # Generate GUI from a function
 # open function file first
@@ -64,7 +68,7 @@ code .\newuser.ps1
 
 # Windows form designer
 # palette > PowerShell: Show Windows Form Designer
-
+code .\newform.ps1
 
 
 
