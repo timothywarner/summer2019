@@ -4,5 +4,5 @@
 
 * [PowerShell on the River 2019](https://www.powershellchatt.com/schedule/)
 * Saturday, August 10, 1:00-1:45pm
-
+* https://timw.info/chatt2019
 

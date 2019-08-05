@@ -3,6 +3,8 @@
 
 Saturday, August 10, 2019, 9:00-9:45am
 
+timw.info/chatt2019
+
 https://www.powershellchatt.com/schedule/
 
 Tim Warner (@TechTrainerTim)
