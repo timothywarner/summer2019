@@ -13,9 +13,9 @@ Tim Warner (@TechTrainerTim)
 break
 
 # Sources of confusion
-Find-Module -Name Azure, AzureRm, Az | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate
+Find-Module -Name Azure, AzureRm, Az | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate | Format-Table -AutoSize
 
-Find-Module -Name Az -AllVersions | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate
+Find-Module -Name Az -AllVersions | Select-Object -Property Name, Version, PublishedDate | Sort-Object -Property PublishedDate -Descending
 <#
 Requires: Az requires PowerShell v5 (not v3 anymore)
 
@@ -86,6 +86,8 @@ $mappings = ((Invoke-WebRequest https://raw.githubusercontent.com/Azure/azure-po
     }
 } | Out-File -FilePath '.\mappings.txt'
 
+code .\mappings.txt
+
 # Deploy a template
 New-AzResourceGroup -Name 'TestRG1' -Location 'EastUS2'
 $params = @{'ResourceGroupName' = 'TestRG1';
@@ -98,4 +100,8 @@ New-AzResourceGroupDeployment @params
 # Refactoring an AzureRm script
 code 'E:\summer2019\Gnarly-AzureRm-Script.ps1'
 
-#
+# Cloud Shell / Azure CLI
+
+# https://shell.azure.com
+
+# Azure CLI Tools VS Code extension
