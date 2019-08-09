@@ -112,6 +112,10 @@ code '.\Gnarly-AzureRm-Script.ps1'
 
 # Cloud Shell / Azure CLI
 
+Get-Command -Noun CloudDrive
+
+
+
 # https://shell.azure.com
 
 # Azure CLI Tools VS Code extension
