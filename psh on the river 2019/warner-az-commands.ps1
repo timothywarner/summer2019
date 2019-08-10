@@ -76,7 +76,7 @@ Get-AzVm -ResourceGroupName 'contoso' # -Name 'vm2'
 Compatibility aliases: AzureRM and Az use some of the same DLLs, so their modules cannot be loaded into the same PowerShell session.
 #>
 Get-Alias
-Enable-AzureRmAlias -Scope CurrentUser
+Enable-AzureRmAlias -scope CurrentUser
 Get-Alias -Name *azurerm* | Select-Object -Property Name, Definition | Select-Object -First 5
 Disable-AzureRmAlias
 
